@@ -11,11 +11,27 @@ flatten([]); // []
 flatten([1, 2]); // [1, 2]
 flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
-
+//move through the arrays
+//have an empty array that we push the values into the arr
+//maybe use slice
+//isArray
 function flatten(arr) {
-  // Your code here
+  let flatArr = [];
+ /* if (arr.length === 0){
+    return [];
+  } else {
+    flatArr.push()
+  }
+}*/
+  arr.forEach(element => {
+    if (Array.isArray(element)) {
+      flatArr = flatArr.concat(flatten(element));
+    } else {
+      flatArr.push(element);
+    }
+  });
+  return flatArr;
 }
-  
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = flatten;
-  
