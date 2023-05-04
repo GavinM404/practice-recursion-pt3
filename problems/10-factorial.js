@@ -18,8 +18,6 @@ function factorial(num) {
   if (num === 1) {
     return 1;
   } else {
-    //console.log(num);
-    console.log(num * factorial(num - 1));
     return num * factorial(num - 1);
 
   }
@@ -27,7 +25,7 @@ function factorial(num) {
 
 // factorial(1); // 1
 // factorial(3); // 6
-factorial(5); // 120
+//factorial(5); // 120
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = factorial;
